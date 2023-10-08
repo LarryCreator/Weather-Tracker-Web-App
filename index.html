@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="application">
+        <div id="screen-top">
+            <div id="timeAndDay">
+                <div id="hour">
+                    <h1>20:10<h1>
+                    <p>PM</p>
+                </div>
+                <p>Wednesday, 04 October 2023</p>
+            </div>
+            <div id="cityCountry">
+                <input type="text" id="searcherInput" placeholder="Search somewhere">
+                <h1>São Paulo</h1>
+                <p>Brazil</p>
+                
+            </div>
+        </div>
+
+        <div id="screen-middle">
+
+        </div>
+
+        <div id="screen-bottom">
+            <div id="currentDayInfo">
+                <img src="./images/icons/loading.gif" alt="" id="icon">
+                <div id="info">
+                    <h3>Today</h3>
+                    <p>?</p>
+                </div>
+            </div>
+            <div class="dayCard">
+                <h3>FRI</h3>
+                <img src="./images/icons/loading.gif" alt="" id="icon">
+                <p><span class="highestTemp">?</span><span class="lowestTemp">?</span></p>
+            </div>
+            <div class="dayCard">
+                <h3>SAT</h3>
+                <img src="./images/icons/loading.gif" alt="" id="icon">
+                <p><span class="highestTemp">?</span><span class="lowestTemp">?</span></p>
+            </div>
+            <div class="dayCard">
+                <h3>SUN</h3>
+                <img src="./images/icons/loading.gif" alt="" id="icon">
+                <p><span class="highestTemp">?</span><span class="lowestTemp">?</span></p>
+            </div>
+            <div class="dayCard">
+                <h3>MON</h3>
+                <img src="./images/icons/loading.gif" alt="" id="icon">
+                <p><span class="highestTemp">?</span><span class="lowestTemp">?</span></p>
+            </div>
+            <div class="dayCard">
+                <h3>TUE</h3>
+                <img src="./images/icons/loading.gif" alt="" id="icon">
+                <p><span class="highestTemp">?</span><span class="lowestTemp">?</span></p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="timeUpdater.js"></script>
+    <script src="weatherUpdater.js"></script>
+    <script src="inputBarController.js"></script>
+    <script src="placeSearcher.js"></script>
+</body>
+</html>

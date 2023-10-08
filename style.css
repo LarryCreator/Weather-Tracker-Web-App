@@ -1,0 +1,167 @@
+body {
+    background-image: url('./images/background_image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.445);
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#application {
+    background-image: url('./images/app_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90%;
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.151);
+    background-blend-mode: multiply;
+    box-shadow: 0px 0px 20px black;
+}
+
+#screen-top {
+    height: 30%;
+    display: flex;
+}
+#timeAndDay {
+    flex: 1;
+    color: white;
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 0px;
+    pointer-events: none;
+    user-select: none;
+}
+#timeAndDay p {
+    font-size: 20px;
+}
+#hour {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+#hour h1 {
+    font-size: 80px;
+    font-weight: normal;
+}
+#hour p {
+    font-size: 30px;
+    margin-left: 7px;
+    transform: translateY(15px);
+}
+
+#cityCountry  {
+    color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 130px;
+    padding-top: 275px;
+    justify-content: end;
+    user-select: none;
+    position: relative;
+    
+}
+#cityCountry h1 {
+    font-size: 40px;
+    font-weight: normal;
+    transform: translateY(24px);
+    cursor: pointer;
+    text-shadow: 0px 0px 15px black;
+}
+#cityCountry p {
+    font-size: 23px;
+    transform: translateY(-24px);
+}
+#screen-middle {
+    height: 35%;
+}
+#screen-bottom {
+    background-blend-mode: multiply;
+    background-color: rgba(8, 0, 78, 0.726);
+    height: 35%;
+    display: flex;
+}
+#currentDayInfo {
+    color: white;
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    user-select: none;
+}
+#currentDayInfo img {
+    height: 130px;
+    margin-right: 50px;
+
+}
+#info h3 {
+
+    font-size: 20px;
+    background-color: rgb(0, 2, 32);;
+    padding: 8px;
+    border-radius: 10%;
+    text-align: center;
+    transform: translateY(50px);
+
+}
+#info p {
+    font-size: 60px;
+    font-weight: normal;
+    text-align: center;
+}
+.dayCard {
+    flex: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    user-select: none;
+}
+.dayCard h3 {
+
+    font-size: 15px;
+    background-color: rgb(0, 2, 32);;
+    padding: 8px;
+    border-radius: 10%;
+    text-align: center;
+}
+.dayCard img {
+    height: 70px;
+}
+.dayCard p {
+    font-size: 30px;
+    display: inline;
+}
+.lowestTemp {
+    color: rgba(177, 223, 253, 0.856);
+    margin-left: 20px;
+}
+#clickableIcon img{
+    height: 60px;
+}
+#searcherInput {
+    background: none;
+    border: none;
+    border-bottom: 3px solid rgba(199, 90, 17, 0.555);
+    color: white;
+    outline: none;
+    font-size: 25px;
+    position: absolute;
+    width: 220px;
+    text-shadow: 5px 5px 5px black;
+}
+#searcherInput::placeholder {
+    color: rgba(255, 255, 255, 0.678);
+    text-align: end;
+}
