@@ -3,7 +3,13 @@ const BASE_URL = 'https://countriesnow.space/api/v0.1/countries'
 async function getPlacesNames(country) {
   const response = await fetch(`${BASE_URL}`).then(response => response.json())
   const { data } = response
-  const countryName = data.find(obj=> obj.iso2 == country).country;
+ let countryName;
+  try {
+    countryName = data.find(obj=> obj.iso2 == country).country;
+  }
+  catch {
+    countryName = '';
+  }
   return countryName;
 }
 

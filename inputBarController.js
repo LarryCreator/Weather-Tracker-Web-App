@@ -16,7 +16,7 @@ class InputBarController {
   }
   getWeatherInfo(e) {
     if (e.key == 'Enter' && this.isFocused && this.inputBarElement.value) {
-      const place = this.inputBarElement.value;
+      const place = this.inputBarElement.value.toLowerCase() == 'brazil' ? 'brasil' : this.inputBarElement.value.toLowerCase();
       const placeExists = placeSearcher.updatePlaceAndCountry(place, placeSearcher.placeElement, placeSearcher.countryElement);
       if (placeExists) {
           placeSearcher.search(place);
