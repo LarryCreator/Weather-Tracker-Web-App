@@ -9,7 +9,7 @@ class WeatherUpdater {
         this.currentDayInfo = {
             img: document.getElementById('currentDayInfo').querySelector('img'),
             temp: document.getElementById('info').querySelector('p'),
-
+            weatherInfo: document.getElementById('weatherValue'),
         }
         this.initializeCards();
         this.initializeImages();
@@ -63,6 +63,7 @@ class WeatherUpdater {
         const data = await this.fetchCurrentDayData(city);
         if (data) {
             this.currentDayInfo.temp.innerHTML = `${parseInt(data.main.temp)}º`
+            this.currentDayInfo.weatherInfo.innerHTML = capitalizePhrase(data.weather[0].description);
             this.updateImg(data, this.currentDayInfo.img);
         }
     }
@@ -172,6 +173,14 @@ class WeatherUpdater {
             dayInitials.innerHTML = nextDays[index].slice(0, 3).toUpperCase();
         })
     }
+}
+
+function capitalizePhrase(string) {
+    const splittedString = string.split(' ');
+    splittedString.forEach((word, index)=>{
+        splittedString[index] = word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    return splittedString.join(' ');
 }
 
 function getNextDays(todayName, numberOfFutureDays) {
