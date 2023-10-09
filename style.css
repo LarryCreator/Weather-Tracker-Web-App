@@ -327,12 +327,10 @@ body {
     }
     #timeAndDay {
         transform: translateY(-50px);
-        padding-left: 40px;
+        padding-left: 35px;
     }
     #cityCountry {
-        padding-top: 0px;
-        padding-right: 0px;
-        padding-left: 20px;
+        padding: 0px;
         align-items: center;
         transform: translateY(-140px);
     }
@@ -340,6 +338,9 @@ body {
         font-size: 20px;
         transform: translateY(-20px);
         width: 190px;
+        text-align: center;
+    }
+    #searcherInput::placeholder {
         text-align: center;
     }
 }
@@ -362,6 +363,7 @@ body {
     #weather img {
         max-width: 120px;
     }
+    
 }
 @media screen and (max-width: 370px) {
     #weather img {

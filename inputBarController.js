@@ -22,6 +22,7 @@ class InputBarController {
           placeSearcher.search(place);
       }
       this.inputBarElement.value = '';
+      this.inputBarElement.blur(); //makes keyboard disappear on phones
     }
   }
 }
