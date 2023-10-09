@@ -15,7 +15,7 @@ class InputBarController {
     document.addEventListener('keydown', this.getWeatherInfo);
   }
   getWeatherInfo(e) {
-    if (e.key == 'Enter' && this.isFocused) {
+    if (e.key == 'Enter' && this.isFocused && this.inputBarElement.value) {
       const place = this.inputBarElement.value;
       const placeExists = placeSearcher.updatePlaceAndCountry(place, placeSearcher.placeElement, placeSearcher.countryElement);
       if (placeExists) {

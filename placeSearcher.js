@@ -27,7 +27,7 @@ class PlaceSearcher {
             return true;
         }
         else {
-            window.alert(`Could not found ${place}`);
+            window.alert(`Could not find ${place}`);
             return false;
         }
     }
@@ -46,7 +46,9 @@ function turnToLoadingMode() {
     const loadingGifSrc = './images/icons/loading.gif';
     const currentDayImg = weatherUpdater.currentDayInfo.img;
     const currentTemp = weatherUpdater.currentDayInfo.temp;
+    const weatherInfo = weatherUpdater.currentDayInfo.weatherInfo;
     currentTemp.innerHTML = '?';
+    weatherInfo.innerHTML = '-';
     currentDayImg.src = loadingGifSrc;
 
     weatherUpdater.cards.forEach(card=>{
