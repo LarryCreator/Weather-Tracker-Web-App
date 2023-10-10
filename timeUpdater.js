@@ -73,11 +73,11 @@ class TimeUpdater {
                 time = {time: "0" + time, minutes: minutes, period: 'AM'};
             }
             else {
-                time = {time: time - 12, minutes: minutes, period: 'AM'};
+                time = {time: time, minutes: minutes, period: 'AM'};
             }
         }
         else {
-            time = {time: time == 12 ? 12 : time - 12, minutes: minutes, period: 'PM'};
+            time = {time: time == 12 ? 12 : (time - 12) < 10 ? "0" + (time - 12) : time - 12, minutes: minutes, period: 'PM'};
         }
         time.seconds = date.getSeconds();
         return time;
